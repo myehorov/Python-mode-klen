@@ -91,6 +91,8 @@ if g:pymode_lint
         " au! BufLeave <buffer> call pymode#lint#stop()
     end
 
+    " Set commands
+    exe "nnoremap <silent> <buffer> " g:pymode_lint_bind ":call pymode#run_pymode_lint()<CR>"
 endif
 
 " Show python documentation

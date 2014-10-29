@@ -87,6 +87,7 @@ call pymode#default('g:pymode_lint_async', 1)
 call pymode#default('g:pymode_lint_async_updatetime', 1000)
 
 " Check code every save if file has been modified
+call pymode#default("g:pymode_lint_bind", '<leader>L')
 call pymode#default("g:pymode_lint_on_write", 1)
 
 " Check code every save (every)
@@ -107,7 +108,7 @@ call pymode#default("g:pymode_lint_ignore", "")
 " Select errors and warnings (e.g. E4,W)
 call pymode#default("g:pymode_lint_select", "")
 
-" Auto open cwindow if any errors has been finded
+" Auto open cwindow if any errors has been found
 call pymode#default("g:pymode_lint_cwindow", 1)
 
 " If not emply, errors will be sort by defined relevance
@@ -157,7 +158,7 @@ call pymode#default('g:pymode_rope_project_root', '')
 " Configurable rope project folder (always relative to project root)
 call pymode#default('g:pymode_rope_ropefolder', '.ropeproject') 
 
-" If project hasnt been finded in current working directory, look at parents directory
+" If project hasnt been found in current working directory, look at parents directory
 call pymode#default('g:pymode_rope_lookup_project', 0)
 
 " Enable Rope completion

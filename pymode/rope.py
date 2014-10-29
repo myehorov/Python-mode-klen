@@ -20,7 +20,7 @@ from .environment import env
 def look_ropeproject(path):
     """ Search for ropeproject in current and parent dirs.
 
-    :return str|None: A finded path
+    :return str|None: A found path
 
     """
     env.debug('Look project', path)

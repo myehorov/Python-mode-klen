@@ -109,6 +109,19 @@ fun! pymode#buffer_pre_write() "{{{
     let b:pymode_modified = &modified
 endfunction
 
+fun! pymode#run_pymode_lint() "{{{
+    if g:pymode_rope
+        if b:pymode_modified && g:pymode_rope_regenerate_on_write
+            call pymode#debug('regenerate')
+            call pymode#rope#regenerate()
+        endif
+    endif
+    if g:pymode_lint
+        call pymode#debug('check code')
+        call pymode#lint#check()
+    endif
+endfunction "}}}
+
 fun! pymode#buffer_post_write() "{{{
     if g:pymode_rope
         if b:pymode_modified && g:pymode_rope_regenerate_on_write
